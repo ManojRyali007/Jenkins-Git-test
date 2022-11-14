@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20221114 15:01:16.685" rpa="false" schemaversion="3">
+<suite id="s1" name="Header main" source="C:\Bond automation\Jenkins-Git\Tests\Mobile_tests\Header_Tests\Header_main.robot">
+<test id="s1-t1" name="Confirm on clicking arrow on suggested search, text appears in input field" line="26">
+<kw name="Begin Web Test" library="common" type="SETUP">
+<kw name="Open Excel Document" library="ExcelLibrary">
+<arg>filename=Resources/JioWeb.xlsx</arg>
+<arg>doc_id=JioWeb</arg>
+<doc>Opens xlsx document file.</doc>
+<status status="PASS" starttime="20221114 15:01:17.864" endtime="20221114 15:01:17.881"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221114 15:01:17.882" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20221114 15:01:17.881" endtime="20221114 15:01:21.397"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221114 15:01:21.397" endtime="20221114 15:01:21.525"/>
+</kw>
+<status status="PASS" starttime="20221114 15:01:17.863" endtime="20221114 15:01:21.525"/>
+</kw>
+<kw name="Verify Suggestion arrow icon functionality" library="MobileHeader_page">
+<kw name="Click on Suggestion icon" library="GlobalSearch">
+<kw name="Visit Mobile Header page of Jio.com" library="MobileHeader_page">
+<kw name="Landing on Mobile Page For Header" library="RedirectionForHeader">
+<kw name="Visit Jio.com And Goto" library="common">
+<arg>${Mobile}</arg>
+<kw name="Visit Jio.com" library="common">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221114 15:01:21.528" level="INFO">Opening url 'https://www.jio.com/'</msg>
+<status status="PASS" starttime="20221114 15:01:21.527" endtime="20221114 15:01:25.759"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221114 15:01:26.262" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20221114 15:01:25.760" endtime="20221114 15:01:26.262"/>
+</kw>
+<status status="PASS" starttime="20221114 15:01:21.527" endtime="20221114 15:01:26.262"/>
+</kw>
+<kw name="Wait For And Click Element" library="common">
+<arg>${Page}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221114 15:01:26.263" endtime="20221114 15:01:26.301"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221114 15:01:26.302" level="INFO">Clicking element 'xpath=//a[@aria-label="Mobile"]'.</msg>
+<status status="PASS" starttime="20221114 15:01:26.302" endtime="20221114 15:01:26.916"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>50ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221114 15:01:26.970" level="INFO">Slept 50 milliseconds</msg>
+<status status="PASS" starttime="20221114 15:01:26.916" endtime="20221114 15:01:26.970"/>
+</kw>
+<status status="PASS" starttime="20221114 15:01:26.263" endtime="20221114 15:01:26.970"/>
+</kw>
+<status status="PASS" starttime="20221114 15:01:21.527" endtime="20221114 15:01:26.970"/>
+</kw>
+<kw name="URL Validation" library="common">
+<arg>https://www.jio.com/mobile.html</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221114 15:01:27.484" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20221114 15:01:26.971" endtime="20221114 15:01:27.484"/>
+</kw>
+<kw name="Wait Until Location Is" library="SeleniumLibrary">
+<arg>${VURL}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" starttime="20221114 15:01:27.484" endtime="20221114 15:01:27.490"/>
+</kw>
+<status status="PASS" starttime="20221114 15:01:26.970" endtime="20221114 15:01:27.490"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>./Results/Mobile_Results/Header_Results/Header_Sc/</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20221114 15:01:27.490" endtime="20221114 15:01:27.491"/>
+</kw>
+<kw name="Take Screenshot" library="common">
+<arg>MobilePage_Header_Loaded</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>300ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221114 15:01:27.800" level="INFO">Slept 300 milliseconds</msg>
+<status status="PASS" starttime="20221114 15:01:27.492" endtime="20221114 15:01:27.800"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${Sc_Name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221114 15:01:28.397" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Header_Sc/MobilePage_Header_Loaded.png"&gt;&lt;img src="Header_Sc/MobilePage_Header_Loaded.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221114 15:01:27.800" endtime="20221114 15:01:28.397"/>
+</kw>
+<status status="PASS" starttime="20221114 15:01:27.492" endtime="20221114 15:01:28.397"/>
+</kw>
+<status status="PASS" starttime="20221114 15:01:21.527" endtime="20221114 15:01:28.398"/>
+</kw>
+<status status="PASS" starttime="20221114 15:01:21.527" endtime="20221114 15:01:28.398"/>
+</kw>
+<kw name="Wait For And Click Element" library="common">
+<arg>xpath=//input[contains(@onclick,"Search")]</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221114 15:01:28.398" endtime="20221114 15:01:28.421"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221114 15:01:28.421" level="INFO">Clicking element 'xpath=//input[contains(@onclick,"Search")]'.</msg>
+<status status="PASS" starttime="20221114 15:01:28.421" endtime="20221114 15:01:28.471"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>50ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221114 15:01:28.536" level="INFO">Slept 50 milliseconds</msg>
+<status status="PASS" starttime="20221114 15:01:28.471" endtime="20221114 15:01:28.536"/>
+</kw>
+<status status="PASS" starttime="20221114 15:01:28.398" endtime="20221114 15:01:28.536"/>
+</kw>
+<kw name="Wait For And Verify Element" library="common">
+<arg>xpath=//div[@class="pkv-searchresult-section-inner"]</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221114 15:01:28.536" endtime="20221114 15:01:29.005"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221114 15:01:29.005" endtime="20221114 15:01:29.013"/>
+</kw>
+<status status="PASS" starttime="20221114 15:01:28.536" endtime="20221114 15:01:29.013"/>
+</kw>
+<kw name="Wait For And Click Element" library="common">
+<arg>xpath=(//span[@class="arrow-suggest"])[${1}]</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221114 15:01:29.014" endtime="20221114 15:01:29.255"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221114 15:01:29.255" level="INFO">Clicking element 'xpath=(//span[@class="arrow-suggest"])[1]'.</msg>
+<status status="PASS" starttime="20221114 15:01:29.255" endtime="20221114 15:01:29.305"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>50ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221114 15:01:29.363" level="INFO">Slept 50 milliseconds</msg>
+<status status="PASS" starttime="20221114 15:01:29.305" endtime="20221114 15:01:29.363"/>
+</kw>
+<status status="PASS" starttime="20221114 15:01:29.013" endtime="20221114 15:01:29.363"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${keyword}</var>
+<arg>xpath=//input[@id="topnav-search"]</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20221114 15:01:29.384" level="INFO">${keyword} = MyJio</msg>
+<status status="PASS" starttime="20221114 15:01:29.363" endtime="20221114 15:01:29.384"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${keyword}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221114 15:01:29.384" endtime="20221114 15:01:29.384"/>
+</kw>
+<kw name="Take Screenshot" library="common">
+<arg>${keyword}_selected</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>300ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221114 15:01:29.691" level="INFO">Slept 300 milliseconds</msg>
+<status status="PASS" starttime="20221114 15:01:29.385" endtime="20221114 15:01:29.691"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${Sc_Name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221114 15:01:30.043" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Header_Sc/MyJio_selected.png"&gt;&lt;img src="Header_Sc/MyJio_selected.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221114 15:01:29.691" endtime="20221114 15:01:30.043"/>
+</kw>
+<status status="PASS" starttime="20221114 15:01:29.385" endtime="20221114 15:01:30.043"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221114 15:01:30.543" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20221114 15:01:30.043" endtime="20221114 15:01:30.543"/>
+</kw>
+<kw name="Wait For And Click Element" library="common">
+<arg>xpath=(//span[@class="arrow-suggest"])[${2}]</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221114 15:01:30.544" endtime="20221114 15:01:30.562"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221114 15:01:30.562" level="INFO">Clicking element 'xpath=(//span[@class="arrow-suggest"])[2]'.</msg>
+<status status="PASS" starttime="20221114 15:01:30.562" endtime="20221114 15:01:30.608"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>50ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221114 15:01:30.671" level="INFO">Slept 50 milliseconds</msg>
+<status status="PASS" starttime="20221114 15:01:30.609" endtime="20221114 15:01:30.671"/>
+</kw>
+<status status="PASS" starttime="20221114 15:01:30.543" endtime="20221114 15:01:30.671"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${keyword}</var>
+<arg>xpath=//input[@id="topnav-search"]</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20221114 15:01:30.690" level="INFO">${keyword} = Recharge</msg>
+<status status="PASS" starttime="20221114 15:01:30.671" endtime="20221114 15:01:30.690"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${keyword}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221114 15:01:30.690" endtime="20221114 15:01:30.691"/>
+</kw>
+<kw name="Take Screenshot" library="common">
+<arg>${keyword}_selected</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>300ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221114 15:01:30.995" level="INFO">Slept 300 milliseconds</msg>
+<status status="PASS" starttime="20221114 15:01:30.691" endtime="20221114 15:01:30.995"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${Sc_Name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221114 15:01:31.363" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Header_Sc/Recharge_selected.png"&gt;&lt;img src="Header_Sc/Recharge_selected.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221114 15:01:30.995" endtime="20221114 15:01:31.363"/>
+</kw>
+<status status="PASS" starttime="20221114 15:01:30.691" endtime="20221114 15:01:31.363"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221114 15:01:31.869" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20221114 15:01:31.363" endtime="20221114 15:01:31.869"/>
+</kw>
+<status status="PASS" starttime="20221114 15:01:21.526" endtime="20221114 15:01:31.869"/>
+</kw>
+<status status="PASS" starttime="20221114 15:01:21.526" endtime="20221114 15:01:31.869"/>
+</kw>
+<kw name="End Web Test" library="common" type="TEARDOWN">
+<kw name="Close All Excel Documents" library="ExcelLibrary">
+<doc>Closes all opened documents.</doc>
+<status status="PASS" starttime="20221114 15:01:31.870" endtime="20221114 15:01:31.870"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221114 15:01:31.870" endtime="20221114 15:01:34.220"/>
+</kw>
+<status status="PASS" starttime="20221114 15:01:31.870" endtime="20221114 15:01:34.220"/>
+</kw>
+<tag>TC17</tag>
+<status status="PASS" starttime="20221114 15:01:17.863" endtime="20221114 15:01:34.220"/>
+</test>
+<doc>To Verify global search functionality on Mobile page</doc>
+<status status="PASS" starttime="20221114 15:01:16.689" endtime="20221114 15:01:34.222"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">TC17</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Header main">Header main</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

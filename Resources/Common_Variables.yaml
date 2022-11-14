@@ -1,0 +1,11 @@
+URL:                            https://www.jio.com/
+Browser:                        chrome
+Mobile:                         xpath=//a[@aria-label="Mobile"]
+Apps:                           xpath=//a[normalize-space()="Apps"]
+Mobile_No:                      9137189575       #Please Change this Number to Your own number
+MyNumber:                       7013348353
+Fiber_No:                       7613564737
+Incorrect_No1:                  1234567890
+Incorrect_No2:                  9887766550
+Name:                           Bond
+Jio.com-Mobile_Page:            https://www.jio.com/mobile.html
